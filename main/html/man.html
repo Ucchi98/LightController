@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Light Control</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container text-center mt-3">
+			<h1 class="h3">🌵 Light Control</h1>
+			<div id="ctrl_button">
+				<div class="row">
+					<div class="col p-1">
+						<button id='btn_left' class="btn btn-outline-light w-100" name=left value=on>Left</button>
+					</div>
+					<div class="col p-1">
+						<button id='btn_right' class="btn btn-outline-light w-100" name=right value=on>Right</button>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col p-1">
+					<a class="btn btn-outline-primary w-100" href="/auto">Auto</a>
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+		<script>
+			function change_sw_state(json){
+				if(json.left=='off'){
+					$('#btn_left').replaceWith('<button id=btn_left class="btn btn-primary w-100" name=left value=off>Left</button>');}else{
+					$('#btn_left').replaceWith('<button id=btn_left class="btn btn-outline-primary w-100" name=left value=on>Left</button>');}
+				if(json.right=='off'){
+					$('#btn_right').replaceWith('<button id=btn_right class="btn btn-primary w-100" name=right value=off>Right</button>');}else{
+					$('#btn_right').replaceWith('<button id=btn_right class="btn btn-outline-primary w-100" name=right value=on>Right</button>');}
+			}
+			$(function(){
+				$.post('/man', {}, function(data){
+					change_sw_state(data);
+				}); });
+			$(document).on('click', 'button', function(){
+				event.preventDefault();
+				var name = $(this).attr('name');
+				var value = $(this).attr('value');
+				$.post('/man', {[name]:value}, function(data){
+					change_sw_state(data);
+				}); });
+		</script>
+	</body>
+</html>

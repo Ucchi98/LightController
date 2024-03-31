@@ -1,0 +1,20 @@
+menu "Light Controller Wifi Settings"
+
+    config LIGHT_CTRL_WIFI_SSID
+        string "Light Controller Wifi SSID"
+        default ""
+        help
+			Wifi SSID to connect.
+
+    config LIGHT_CTRL_WIFI_PASSWORD
+        string "Wifi Passowrd"
+        default ""
+        help
+            Wifi Password to connect.
+
+    config LIGHT_CTRL_SNTP_SERVER
+        string "SNTP Server"
+        default "ntp.nict.jp"
+        help
+            SNTP Server to synchronize.
+endmenu
