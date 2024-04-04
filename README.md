@@ -63,6 +63,6 @@ Expressif Systems 社の ESP32 開発環境である esp-idf が必要です。
 
 ## License
 
-MIT License - see the [LICENSE.md](LICENSE.md) file for
+MIT License - see the [LICENSE](LICENSE) file for
 details
 
