@@ -1,6 +1,6 @@
 # Plant Cultivation Light Controller
 
-植物育成ライトコントローラー
+植物育成ライトコントローラー用ファームウェア
 
 ## Getting Started
 
@@ -13,7 +13,7 @@ ESP32C3 で動作します。
 Web サーバを内蔵させて、PC やスマホのウェブブラウザからアクセスして、
 ライトの点灯状態の確認や、点灯状態の設定を行えるようにしました。
 
-回路の作製は [Youtube](https://www.youtube.com/@UCCHI08) で紹介しています。
+回路の作製は [Youtube](https://www.youtube.com/watch?v=mmjSxg6lPqk) で紹介しています。
 
 ### 準備
 
