@@ -1,10 +1,10 @@
 menu "Light Controller Wifi Settings"
 
     config LIGHT_CTRL_WIFI_SSID
-        string "Light Controller Wifi SSID"
+        string "Wifi SSID"
         default ""
         help
-			Wifi SSID to connect.
+            Wifi SSID to connect.
 
     config LIGHT_CTRL_WIFI_PASSWORD
         string "Wifi Passowrd"
