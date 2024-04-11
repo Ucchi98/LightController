@@ -24,7 +24,7 @@ Expressif Systems 社の ESP32 開発環境である esp-idf が必要です。
 ### ビルド
 
     git clone https://github.com/Ucchi98/LightController.git
-    cd light_controller
+    cd LightController
 
 ビルド対象の CPU を設定
 
